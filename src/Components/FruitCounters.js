@@ -2,25 +2,18 @@ import React from 'react';
 
 function FruitCounter({classWrapperAttribute, counterValue, setCounterValue, classAttribute, valueAttribute}) {
 
-    function addCounterValue() {
-         return counterValue ++;
-    }
-
-    function minCounterValue() {
-         return counterValue --;
-    }
-
     return (
         <div className={classWrapperAttribute}>
             <h2 className={classAttribute}>{valueAttribute}</h2>
             <button
                 className={classAttribute}
-                onClick={() => counterValue >= 1 && setCounterValue(minCounterValue)}
+                onClick={() => setCounterValue(curr => curr - 1)}
+                disabled={ counterValue <= 0 && true}
             >-</button>
             <p className={classAttribute}>{counterValue}</p>
             <button
                 className={classAttribute}
-                onClick={() => setCounterValue(addCounterValue)}
+                onClick={() => setCounterValue(curr => curr +1)}
             >+</button>
         </div>
     );
