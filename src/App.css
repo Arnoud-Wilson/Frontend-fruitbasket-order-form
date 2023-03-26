@@ -1,0 +1,27 @@
+.fruit-counter {
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 8px;
+    width: 275px;
+    text-align: center;
+
+}
+
+.fruit-item {
+    display: inline-block;
+    margin: 5px;
+}
+
+.reset-button {
+    padding: 10px 140px ;
+}
+
+input {
+    margin: 10px;
+}
+
+form {
+    width: 500px;
+    text-align: center;
+}
